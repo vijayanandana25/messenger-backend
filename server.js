@@ -7,12 +7,6 @@ app.use(express.json());
 
 let messages = [];
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log("Server running on port", PORT);
-});
-
 app.get("/messages", (req, res) => {
   res.json(messages);
 });
@@ -23,3 +17,6 @@ app.post("/messages", (req, res) => {
   res.json({ success: true });
 });
 
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
